@@ -4,7 +4,6 @@ def open_text():
         print(file_contents)
 
 open_text()
-\n
 
 text = open("books/frankenstein.txt").read()
 
@@ -13,7 +12,6 @@ def word_count(text):
     return number_of_words
 
 print(word_count(text))
-\n 
 
 text = open("books/frankenstein.txt").read()
 
@@ -30,11 +28,20 @@ def count_characters():
 
     return char_dict
 
-    print(count_characters())
+print(count_characters())
 
+def print_report():
+    char_dict = count_characters()
 
+    char_list = list(char_dict.items())
 
+    def get_count(item):
+        return item[1]
+    
+    char_list.sort(reverse=True, key=get_count)
 
+    for char, count in char_list:
+        if char.isalpha():
+            print(f"The '{char}' character was found {count} times")
 
-
-
+print_report()
