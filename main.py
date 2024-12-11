@@ -3,15 +3,13 @@ def open_text():
         file_contents = f.read()
         print(file_contents)
 
-open_text()
-
 text = open("books/frankenstein.txt").read()
 
 def word_count(text):
     number_of_words = len(text.split())
     return number_of_words
 
-print(word_count(text))
+
 
 text = open("books/frankenstein.txt").read()
 
@@ -28,7 +26,7 @@ def count_characters():
 
     return char_dict
 
-print(count_characters())
+
 
 def print_report():
     char_dict = count_characters()
@@ -44,4 +42,8 @@ def print_report():
         if char.isalpha():
             print(f"The '{char}' character was found {count} times")
 
+print("--- Begin report of books/frankenstein.txt ---")
+print(f"{word_count(text)} words found in the document")
+print("\n")
 print_report()
+print("--- End report ---")
