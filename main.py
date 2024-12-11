@@ -1,11 +1,10 @@
-def main():
+def open_text():
     with open("books/frankenstein.txt") as f:
         file_contents = f.read()
         print(file_contents)
 
-
-main()
-
+open_text()
+\n
 
 text = open("books/frankenstein.txt").read()
 
@@ -14,7 +13,7 @@ def word_count(text):
     return number_of_words
 
 print(word_count(text))
-
+\n 
 
 text = open("books/frankenstein.txt").read()
 
@@ -28,11 +27,11 @@ def count_characters():
             char_dict[i] = 1
         else:
             char_dict[i] += 1
-    
+
     return char_dict
 
-print(count_characters())
-        
+    print(count_characters())
+
 
 
 
